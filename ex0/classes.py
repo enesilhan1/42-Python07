@@ -45,4 +45,4 @@ class Torragon(Creature):
 
 
     def attack(self) -> str:
-        return (f"{self.name} uses HYdro Pump!")
+        return (f"{self.name} uses Hydro Pump!")
