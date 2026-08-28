@@ -1,0 +1,15 @@
+import abc
+
+class Creature(abc.ABC):
+
+    def __init__(self, name: str, kind: str):
+        self.name = name
+        self.kind = kind
+        
+
+    @abc.abstractmethod
+    def attack(self) -> str:
+        pass
+
+    def describe(self) -> str:
+        return (f"{self.name} is a {self.type} type Creature")
