@@ -5,7 +5,7 @@ class Creature(abc.ABC):
     def __init__(self, name: str, kind: str):
         self.name = name
         self.kind = kind
-        
+
 
     @abc.abstractmethod
     def attack(self) -> str:
