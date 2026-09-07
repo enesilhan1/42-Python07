@@ -1,4 +1,5 @@
 from ex0 import CreatureFactory, FlameFactory, AquaFactory
+from ex0 import creature
 from ex1 import HealingCreatureFactory, TransformCreatureFactory
 from ex2 import BattleStrategy, NormalStrategy
 from ex2 import DefensiveStrategy, AggressiveStrategy
@@ -6,7 +7,12 @@ from ex2 import InvalidStrategyError
 
 
 def battle(fight: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
-    pass
+    print("*** Tournament ***")
+    print(f"{len(fight)} opponents involved\n")
+    print("* Battle *")
+    creature1 = fight[0][0]
+    print()
+
 
 
 def main() -> None:
