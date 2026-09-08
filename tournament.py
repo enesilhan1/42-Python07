@@ -7,11 +7,30 @@ from ex2 import InvalidStrategyError
 
 
 def battle(fight: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
-    print("*** Tournament ***")
-    print(f"{len(fight)} opponents involved\n")
-    print("* Battle *")
-    creature1 = fight[0][0]
-    print()
+    i: int = 0
+    j: int = i + 1
+    for i in range(len(fight)):
+        for j in range(i + 1, len(fight)):
+            fac1, strategy1 = fight[i]
+            fac2, strategy2 = fight[j]
+
+            creature1 = fac1.create_base()
+            creature2 = fac2.create_base()
+
+            print("\n* Battle *")
+
+            print(creature1.describe())
+            print(" vs.")
+            print(creature2.describe())
+
+            print("Now fight!")
+
+            try:
+                strategy1.act(creature1)
+                strategy2.act(creature2)
+            except InvalidStrategyError as e:
+                print(e)
+
 
 
 
