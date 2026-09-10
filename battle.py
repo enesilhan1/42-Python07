@@ -43,5 +43,6 @@ def main() -> None:
 
     fight(flame, aqua)
 
+
 if __name__ == "__main__":
     main()

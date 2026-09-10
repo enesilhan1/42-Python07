@@ -2,6 +2,7 @@ from ex0.creature import Creature
 from .capacitor import HealCapability
 from .capacitor import TransformCapability
 
+
 class Sproutling(Creature, HealCapability):
 
     def __init__(self) -> None:

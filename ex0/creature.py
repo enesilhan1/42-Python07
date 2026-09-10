@@ -1,11 +1,11 @@
 import abc
 
+
 class Creature(abc.ABC):
 
     def __init__(self, name: str, kind: str):
         self.name = name
         self.kind = kind
-
 
     @abc.abstractmethod
     def attack(self) -> str:
@@ -25,7 +25,7 @@ class Flameling(Creature):
 
 class Pyrodon(Creature):
     def __init__(self) -> None:
-        super().__init__("Pyrodon","Fire/Flying")
+        super().__init__("Pyrodon", "Fire/Flying")
 
     def attack(self) -> str:
         return (f"{self.name} uses Flamethrower!")
@@ -42,7 +42,6 @@ class Aquabub(Creature):
 class Torragon(Creature):
     def __init__(self):
         super().__init__("Torragon", "Water")
-
 
     def attack(self) -> str:
         return (f"{self.name} uses Hydro Pump!")

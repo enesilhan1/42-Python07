@@ -13,6 +13,7 @@ class HealingCreatureFactory(CreatureFactory):
     def create_evolved(self) -> Creature:
         return Bloomelle()
 
+
 class TransformCreatureFactory(CreatureFactory):
     def create_base(self) -> Creature:
         return Shiftling()

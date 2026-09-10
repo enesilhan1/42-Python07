@@ -32,8 +32,6 @@ def battle(fight: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
                 return
 
 
-
-
 def main() -> None:
     flame = FlameFactory()
     aqua = AquaFactory()
@@ -53,7 +51,6 @@ def main() -> None:
     battle([(aqua, normal), (heal, defensive), (transform, aggressive)])
 
     print()
-
 
 
 if __name__ == "__main__":

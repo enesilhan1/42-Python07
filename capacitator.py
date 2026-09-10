@@ -4,7 +4,6 @@ from ex1 import HealingCreatureFactory
 from ex1 import TransformCreatureFactory
 
 
-
 def healing(fac: HealingCreatureFactory) -> None:
     base = fac.create_base()
     print("Testing Creature with healing capability")
@@ -44,7 +43,6 @@ def transform(fac: TransformCreatureFactory) -> None:
     print(evo.attack())
     if isinstance(evo, TransformCapability):
         print(evo.revert())
-
 
 
 def main() -> None:
