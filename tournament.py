@@ -1,5 +1,4 @@
 from ex0 import CreatureFactory, FlameFactory, AquaFactory
-from ex0 import creature
 from ex1 import HealingCreatureFactory, TransformCreatureFactory
 from ex2 import BattleStrategy, NormalStrategy
 from ex2 import DefensiveStrategy, AggressiveStrategy
@@ -7,8 +6,8 @@ from ex2 import InvalidStrategyError
 
 
 def battle(fight: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
-    i: int = 0
-    j: int = i + 1
+    print("*** Tournament ***")
+    print(f"{len(fight)} opponents involved")
     for i in range(len(fight)):
         for j in range(i + 1, len(fight)):
             fac1, strategy1 = fight[i]
@@ -23,13 +22,14 @@ def battle(fight: list[tuple[CreatureFactory, BattleStrategy]]) -> None:
             print(" vs.")
             print(creature2.describe())
 
-            print("Now fight!")
+            print("now fight!")
 
             try:
                 strategy1.act(creature1)
                 strategy2.act(creature2)
             except InvalidStrategyError as e:
-                print(e)
+                print(f"Battle error, aborting tournament: {e}")
+                return
 
 
 
